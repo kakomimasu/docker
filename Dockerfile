@@ -1,4 +1,4 @@
-FROM denoland/deno:1.11.5
+FROM denoland/deno:1.13.0
 
 RUN apt-get -qq update \
  && apt-get -qq install -y --no-install-recommends curl ca-certificates unzip \
