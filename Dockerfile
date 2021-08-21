@@ -1,4 +1,4 @@
-FROM denoland/deno:1.13.0
+FROM denoland/deno:1.13.1
 
 RUN apt-get -qq update \
  && apt-get -qq install -y --no-install-recommends curl ca-certificates unzip \
@@ -6,8 +6,8 @@ RUN apt-get -qq update \
          --output kakomimasu.zip \
  && unzip kakomimasu.zip \
  && rm kakomimasu.zip \
- && chmod 755 Kakomimasu-master \
- && mv Kakomimasu-master /usr/bin/kakomimasu \
+ && chmod 755 Kakomimasu-1.0.0-beta \
+ && mv Kakomimasu-1.0.0-beta /usr/bin/kakomimasu \
  && apt-get -qq remove --purge -y curl ca-certificates unzip \
  && apt-get -y -qq autoremove \
  && apt-get -qq clean \
