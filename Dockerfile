@@ -2,7 +2,7 @@ FROM denoland/deno:1.13.0
 
 RUN apt-get -qq update \
  && apt-get -qq install -y --no-install-recommends curl ca-certificates unzip \
- && curl -fsSL https://github.com/codeforkosen/Kakomimasu/archive/refs/heads/master.zip \
+ && curl -fsSL https://github.com/codeforkosen/Kakomimasu/archive/refs/tags/v1.0.0-beta.zip \
          --output kakomimasu.zip \
  && unzip kakomimasu.zip \
  && rm kakomimasu.zip \
